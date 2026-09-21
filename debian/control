@@ -1,4 +1,4 @@
-Source: linkedin-mcp-server
+Source: mcp-server-linkedin
 Section: net
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
@@ -11,19 +11,24 @@ Build-Depends:
 Standards-Version: 4.7.0
 Homepage: https://github.com/stickerdaniel/linkedin-mcp-server
 Rules-Requires-Root: no
-Vcs-Git: https://github.com/Vitexus/linkedin-mcp-server.git
-Vcs-Browser: https://github.com/Vitexus/linkedin-mcp-server
+Vcs-Git: https://github.com/Vitexus/mcp-server-linkedin.git
+Vcs-Browser: https://github.com/Vitexus/mcp-server-linkedin
 
-Package: linkedin-mcp-server
+Package: mcp-server-linkedin
 Architecture: all
 Multi-Arch: foreign
 Depends:
  ${misc:Depends},
  ${python3:Depends},
  python3-dotenv,
- python3-fastmcp,
+ python3-fastmcp (>= 2.14),
  python3-inquirer,
+ python3-mcp (>= 1.24),
+ python3-mcp (<< 2.0),
  python3-patchright,
+Provides: linkedin-mcp-server
+Replaces: linkedin-mcp-server (<< 4.13.1~)
+Breaks: linkedin-mcp-server (<< 4.13.1~)
 Description: MCP server for LinkedIn profile, company, and job scraping
  linkedin-mcp-server provides a Model Context Protocol (MCP) server
  that enables AI assistants such as Claude to scrape LinkedIn profiles,
@@ -38,3 +43,14 @@ Description: MCP server for LinkedIn profile, company, and job scraping
  .
  The server exposes tools via the MCP protocol and can be integrated with
  any MCP-compatible AI client.
+
+Package: mcprack-mcp-server-linkedin
+Architecture: all
+Depends:
+ ${misc:Depends},
+ mcprack (>= 1.5.1),
+ mcp-server-linkedin (= ${binary:Version}),
+Description: Registers LinkedIn MCP server into mcprack catalog
+ Companion package for mcp-server-linkedin. Installing it registers
+ the linkedin-mcp-server binary as an available MCP server in the
+ local mcprack instance; removing it unregisters it again.

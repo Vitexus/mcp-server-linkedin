@@ -1,3 +1,12 @@
+mcp-server-linkedin (4.13.1-1) unstable; urgency=medium
+
+  * Rename package linkedin-mcp-server → mcp-server-linkedin
+    (Provides/Replaces/Breaks for clean apt upgrade).
+  * Add mcprack-mcp-server-linkedin companion package.
+  * Update Vcs URLs for the GitHub repo rename.
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Mon, 21 Sep 2026 16:00:00 +0200
+
 linkedin-mcp-server (4.13.0) unstable; urgency=low
 
   * Initial release. Closes: #nnnn
