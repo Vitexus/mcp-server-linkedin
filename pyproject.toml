@@ -47,6 +47,7 @@ Issues = "https://github.com/stickerdaniel/linkedin-mcp-server/issues"
 Changelog = "https://github.com/stickerdaniel/linkedin-mcp-server/releases"
 
 [project.scripts]
+mcp-server-linkedin = "linkedin_mcp_server.cli_main:main"
 linkedin-mcp-server = "linkedin_mcp_server.cli_main:main"
 linkedin-scraper-mcp = "linkedin_mcp_server.cli_main:main"
 

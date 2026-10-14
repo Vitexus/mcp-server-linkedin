@@ -8,7 +8,7 @@ case "$1" in
         mcprack server create mcp-server-linkedin \
           --label 'LinkedIn MCP Server' \
           --transport stdio \
-          --command /usr/bin/linkedin-mcp-server \
+          --command /usr/bin/mcp-server-linkedin \
           --category debian \
           --enabled" || true
     fi
