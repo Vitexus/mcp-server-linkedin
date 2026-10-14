@@ -1,3 +1,12 @@
+mcp-server-linkedin (4.27.0-1) unstable; urgency=medium
+
+  * New upstream version 4.27.0
+  * Upstream now ships the mcp-server-linkedin script name natively;
+    legacy aliases kept for compatibility
+
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Wed, 14 Oct 2026 17:41:51 +0200
+
 mcp-server-linkedin (4.13.1-1) unstable; urgency=medium
 
   * Rename package linkedin-mcp-server → mcp-server-linkedin
