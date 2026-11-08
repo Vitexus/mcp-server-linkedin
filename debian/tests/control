@@ -1,3 +1,7 @@
 Tests: import-test
 Depends: @
 Restrictions: allow-stderr
+
+Tests: smoke
+Depends: @, mcprack (>= 1.6.0)
+Restrictions: allow-stderr

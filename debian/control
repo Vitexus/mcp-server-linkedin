@@ -48,7 +48,7 @@ Package: mcprack-mcp-server-linkedin
 Architecture: all
 Depends:
  ${misc:Depends},
- mcprack (>= 1.5.1),
+ mcprack (>= 1.6.0),
  mcp-server-linkedin (= ${binary:Version}),
 Description: Registers LinkedIn MCP server into mcprack catalog
  Companion package for mcp-server-linkedin. Installing it registers
